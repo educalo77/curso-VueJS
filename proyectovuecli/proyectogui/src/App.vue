@@ -24,6 +24,11 @@
     <hr />
     <hr />
     <Padre></Padre>
+    <hr />
+    <hr />
+    <Elemento tipo="h1">Texto de este elemento</Elemento>
+    <Elemento tipo="h2">Texto de este elemento</Elemento>
+    <Elemento tipo="h3">Texto de este elemento</Elemento>
   </div>
 </template>
 
@@ -33,7 +38,7 @@ import axios from "axios";
 import Usuarios from "./components/Usuarios";
 import Slot from "./components/Slot";
 import Padre from "./components/Padre";
-
+import Elemento from "./components/Elemento";
 export default {
   name: "App",
   components: {
@@ -41,6 +46,7 @@ export default {
     Usuarios,
     Slot,
     Padre,
+    Elemento,
   },
   data() {
     return {
