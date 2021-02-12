@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <Saludo></Saludo>
+    <Persona nombre="Edu" edad="43"></Persona>
+    <hr />
+    <Persona nombre="Ami" edad="10"></Persona>
   </div>
 </template>
 
 <script>
-import Saludo from "./components/Saludos";
+import Persona from "./components/Persona";
 
 export default {
   name: "App",
   components: {
-    Saludo,
+    Persona,
   },
 };
 </script>
