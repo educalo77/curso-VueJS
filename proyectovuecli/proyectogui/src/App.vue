@@ -15,6 +15,15 @@
     >
     </Usuarios>
     <hr />
+    <Slot>
+      Hola desde el Slot
+      <template slot="slotdos">
+        Hola desde Slot 2
+      </template>
+    </Slot>
+    <hr />
+    <hr />
+    <Padre></Padre>
   </div>
 </template>
 
@@ -22,12 +31,16 @@
 import Persona from "./components/Persona";
 import axios from "axios";
 import Usuarios from "./components/Usuarios";
+import Slot from "./components/Slot";
+import Padre from "./components/Padre";
 
 export default {
   name: "App",
   components: {
     Persona,
     Usuarios,
+    Slot,
+    Padre,
   },
   data() {
     return {
