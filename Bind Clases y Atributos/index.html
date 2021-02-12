@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .completado {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <h2>Estado de tareas</h2>
+        <ul>
+            <li v-for="tarea in tareas" @click="completarTarea(tarea)" v-bind:class="{completado: tarea.completado}">
+                {{tarea.titulo}}
+            </li>
+        </ul>
+        <hr>
+        <pre>
+            {{tareas}}
+        </pre>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="codigo.js"></script>
+</body>
+
+</html>
