@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>Blog</h1>
+    <h1 v-alerta="50">Blog</h1>
+    <!-- aqui le sumamos una directiva que creamos. cambia color del font y el size -->
     <button @click="volverInicio">Volver a inicio</button>
   </div>
 </template>

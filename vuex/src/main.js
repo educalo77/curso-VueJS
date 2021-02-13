@@ -10,6 +10,14 @@ const router = new VueRouter({
   routes,
 });
 
+Vue.directive("alerta", {
+  //esto crea una directiva tipo v-show v-for etc en este caso v-alerta
+  bind(el, binding) {
+    el.style.color = "red";
+    el.style.fontSize = binding.value + "px";
+  },
+});
+
 import { store } from "../src/store/store";
 
 new Vue({
