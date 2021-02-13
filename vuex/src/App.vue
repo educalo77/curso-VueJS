@@ -21,6 +21,12 @@
     <hr />
     <h1>Action Vuex</h1>
     <Home></Home>
+    <hr />
+    <hr />
+    <h1>6 pasos para aprender a trabajar con rutas en VUE</h1>
+    <router-link to="/inicio">Inicio / </router-link>
+    <router-link to="/blog"> Blog</router-link>
+    <router-view></router-view>
   </div>
 </template>
 <script>
