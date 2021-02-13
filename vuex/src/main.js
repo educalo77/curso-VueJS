@@ -17,6 +17,25 @@ Vue.directive("alerta", {
     el.style.fontSize = binding.value + "px";
   },
 });
+Vue.directive("topfixed", {
+  bind(el, binding) {
+    // bind es un hook de vue
+    console.log(el, binding);
+    el.style.color = "blue";
+    el.style.position = "fixed";
+    if (binding.expression) {
+      el.style.top = binding.expression + "%";
+    }
+    if (binding.arg) {
+      let color = "red";
+      let modificadores = Object.keys(binding.modifiers);
+      if (modificadores.length > 0) {
+        color = modificadores[0];
+      }
+      el.style.backgroundColor = color;
+    }
+  },
+});
 
 import { store } from "../src/store/store";
 
