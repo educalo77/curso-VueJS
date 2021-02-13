@@ -16,6 +16,11 @@
     <hr />
     <hr />
     <h1>Vuex Mutations</h1>
+    <Counter></Counter>
+    <hr />
+    <hr />
+    <h1>Action Vuex</h1>
+    <Home></Home>
   </div>
 </template>
 <script>
@@ -23,12 +28,16 @@ import { mapState } from "vuex";
 import Contador from "./components/Contador";
 import LeerStore from "./components/LeerStore";
 import Usuarios from "./components/Usuarios";
+import Counter from "./components/Counter";
+import Home from "./components/Home";
 export default {
   name: "App",
   components: {
     Contador,
     LeerStore,
     Usuarios,
+    Counter,
+    Home,
   },
   computed: mapState(["nombre", "edad"]),
   /**   

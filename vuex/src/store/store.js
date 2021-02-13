@@ -1,13 +1,16 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
     count: 0,
+    contador: 0,
     nombre: "Edu",
     edad: 43,
+    users: null,
     usuarios: [
       {
         nombre: "Edu",
@@ -41,17 +44,30 @@ export const store = new Vuex.Store({
       },
     ],
   },
+
   getters: {
     listadoactivos: (state) => {
       return state.usuarios.filter((usuario) => usuario.activo).length;
     },
   },
   mutations: {
+    aumentar: (state) => state.contador++,
+    reducir: (state) => state.contador--,
     increment(state) {
       state.count++;
     },
     decrement(state) {
       state.count--;
+    },
+    obtenerusuarios(state) {
+      axios
+        .get("https://jsonplaceholder.typicode.com/users")
+        .then((r) => (state.users = r.data));
+    },
+  },
+  actions: {
+    getusuarios(context) {
+      context.commit("obtenerusuarios");
     },
   },
 });
