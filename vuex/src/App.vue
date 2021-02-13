@@ -24,8 +24,10 @@
     <hr />
     <hr />
     <h1>6 pasos para aprender a trabajar con rutas en VUE</h1>
-    <router-link to="/inicio">Inicio / </router-link>
-    <router-link to="/blog"> Blog</router-link>
+    <router-link active-class="activo" tag="li" exact to="/inicio"
+      >Inicio</router-link
+    >
+    <router-link active-class="activo" exact to="/blog">Blog</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -61,5 +63,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.activo {
+  text-decoration: none;
+  color: orange;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 </style>
