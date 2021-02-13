@@ -30,6 +30,7 @@
     <router-link active-class="activo" exact to="/blog">Blog</router-link>
     <h1>Rutas Dinamicas</h1>
     <router-link active-class="activo" exact to="/post/01">Posts</router-link>
+    <router-link active-class="activo" exact to="/post/127">Posts</router-link>
     <router-view></router-view>
   </div>
 </template>

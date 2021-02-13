@@ -14,6 +14,12 @@ export default {
       id,
     };
   },
+  watch: {
+    $route(to) {
+      // se usa to y for
+      this.id = to.params.id;
+    },
+  },
 };
 </script>
 
